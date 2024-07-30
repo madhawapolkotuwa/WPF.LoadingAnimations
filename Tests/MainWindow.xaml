@@ -9,6 +9,7 @@
     Title="Loading Animation"
     Width="750"
     Height="450"
+    Background="#012148"
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
@@ -41,7 +42,7 @@
                 Grid.Column="2"
                 Content="Loading..."
                 Foreground="Chocolate"
-                Color="Brown"
+                Color="#e04f5f"
                 Duration="0:0:1.0" />
         </Grid>
         <Grid Grid.Row="1">
@@ -54,14 +55,14 @@
             <mp:DotsRingSpinner
                 Width="150"
                 Height="150"
-                Color="Red"
+                Color="#05c3ee"
                 Duration="0:0:2.0" />
 
             <mp:ThreeDotsAnimation
                 Grid.Column="1"
                 Width="100"
                 Height="100"
-                Color="ForestGreen"
+                Color="White"
                 Duration="0:0:1.0" />
 
             <mp:WaveAnimation
