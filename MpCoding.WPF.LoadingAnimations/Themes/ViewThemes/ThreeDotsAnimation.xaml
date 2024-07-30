@@ -1,0 +1,102 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:bc="clr-namespace:MpCoding.WPF.LoadingAnimations.Controls">
+    <Style TargetType="{x:Type bc:ThreeDotsAnimation}">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="MinWidth" Value="70" />
+        <Setter Property="MinHeight" Value="20" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type bc:ThreeDotsAnimation}">
+                    <Viewbox>
+                        <Border>
+                            <Border.Resources>
+
+                                <Style TargetType="Ellipse">
+                                    <Setter Property="Fill" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type bc:ThreeDotsAnimation}}, Path=Color}" />
+                                    <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+                                    <Setter Property="Width" Value="20" />
+                                    <Setter Property="Height" Value="20" />
+                                    <Setter Property="RenderTransform">
+                                        <Setter.Value>
+                                            <ScaleTransform ScaleX="0" ScaleY="0" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+
+                                <Storyboard
+                                    x:Key="DotAnimation"
+                                    RepeatBehavior="Forever"
+                                    SpeedRatio="{Binding RelativeSource={RelativeSource AncestorType={x:Type bc:ThreeDotsAnimation}}, Path=SpeedRatio}"
+                                    Duration="0:0:1.900">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Ellipse0" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.000" Value="0" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.500" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.600" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.100" Value="0" />
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Ellipse1" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.250" Value="0" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.750" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.850" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.350" Value="0" />
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Ellipse2" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.500" Value="0" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.000" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.100" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.600" Value="0" />
+                                    </DoubleAnimationUsingKeyFrames>
+
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Ellipse0" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.000" Value="0" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.500" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.600" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.100" Value="0" />
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Ellipse1" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.250" Value="0" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.750" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.850" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.350" Value="0" />
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PART_Ellipse2" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)">
+                                        <LinearDoubleKeyFrame KeyTime="0:0:0.500" Value="0" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.000" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.100" Value="1" />
+                                        <LinearDoubleKeyFrame KeyTime="0:0:1.600" Value="0" />
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+
+                            </Border.Resources>
+
+                            <Border.Triggers>
+                                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                    <BeginStoryboard x:Name="DotAnimation_BeginStoryboard" Storyboard="{StaticResource DotAnimation}" />
+                                </EventTrigger>
+                            </Border.Triggers>
+
+                            <Border Background="Transparent">
+                                <Grid Width="70" Height="20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="5" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="5" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Ellipse x:Name="PART_Ellipse0" Grid.Column="0" />
+                                    <Ellipse x:Name="PART_Ellipse1" Grid.Column="2" />
+                                    <Ellipse x:Name="PART_Ellipse2" Grid.Column="4" />
+                                </Grid>
+                            </Border>
+                        </Border>
+                    </Viewbox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

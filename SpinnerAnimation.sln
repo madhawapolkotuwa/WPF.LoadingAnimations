@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MpCoding.WPF.LoadingAnimations", "MpCoding.WPF.LoadingAnimations\MpCoding.WPF.LoadingAnimations.csproj", "{D41072EC-97EB-4CEC-9F03-522E4D8EA08A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{1A4B4F13-46F1-4CE6-803D-1B4AC42D581C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D41072EC-97EB-4CEC-9F03-522E4D8EA08A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41072EC-97EB-4CEC-9F03-522E4D8EA08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41072EC-97EB-4CEC-9F03-522E4D8EA08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41072EC-97EB-4CEC-9F03-522E4D8EA08A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4B4F13-46F1-4CE6-803D-1B4AC42D581C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4B4F13-46F1-4CE6-803D-1B4AC42D581C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4B4F13-46F1-4CE6-803D-1B4AC42D581C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4B4F13-46F1-4CE6-803D-1B4AC42D581C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37534C48-CA94-4C2E-BFBC-18C03D9A56E9}
+	EndGlobalSection
+EndGlobal
