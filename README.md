@@ -8,7 +8,7 @@ WPF Loading Animitions
 <Window ...
         xmlns:mp="http://schemas.mpcoding.com/mpcoding/wpf/loadinganimation">
 ```
-- Add Loading indicator and select mode
+- Add Loading Animation Give Duration and Color etc.
 ```xml
 <mp:DonutSpinner Width="200" Height="200" SpinnerColor="LightGreen" Duration="0:0:1.0"/>
 
@@ -22,3 +22,4 @@ WPF Loading Animitions
 
 <mp:WaveAnimation Width="100" Height="100" Color="DarkOrange" Duration="0:0:2.0" />
 ```
+Note: Default Duration is 0:0:1.0
