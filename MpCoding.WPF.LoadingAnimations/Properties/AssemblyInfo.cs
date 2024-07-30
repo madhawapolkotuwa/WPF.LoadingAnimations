@@ -12,11 +12,11 @@ using System.Windows.Markup;
 // components.  If you need to access a type in this assembly from COM, set the ComVisible
 // attribute to true on that type.
 
-[assembly: ComVisible(false)]
+//[assembly: ComVisible(false)]
 
-// The following GUID is for the ID of the typelib if this project is exposed to COM.
+//// The following GUID is for the ID of the typelib if this project is exposed to COM.
 
-[assembly: Guid("bc267e9b-e7cb-45e9-96bd-5063edf040b6")]
+//[assembly: Guid("bc267e9b-e7cb-45e9-96bd-5063edf040b6")]
 
 [assembly: ThemeInfo(
     ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located

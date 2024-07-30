@@ -1,10 +1,38 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-    <ImplicitUsings>enable</ImplicitUsings>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+	    <ImplicitUsings>enable</ImplicitUsings>
+	    <ApplicationIcon>MpCodingDP.ico</ApplicationIcon>
+	    <PackageTags>WPF; Loading; Spinner;</PackageTags>
+	    <PackageReleaseNotes>Loading Animations</PackageReleaseNotes>
+	    <RepositoryType>git</RepositoryType>
+	    <RepositoryUrl>https://github.com/madhawapolkotuwa/WPF.LoadingAnimations.git</RepositoryUrl>
+	    <PackageProjectUrl>https://github.com/madhawapolkotuwa/WPF.LoadingAnimations.git</PackageProjectUrl>
+	    <Copyright>MpCoding © 2024</Copyright>
+	    <Description>A Simple Loading Animations for WPF Applications</Description>
+	    <Company>MpCoding</Company>
+	    <Authors>Madhawa.Polkotuwa</Authors>
+	    <Title>WPF Loading Animations</Title>
+	    <PackageId>MpCoding.WPF.LoadingAnimations</PackageId>
+	    <Version>1.0.1</Version>
+	    <PackageIcon>MpCodingDP.png</PackageIcon>
+	  
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="MpCodingDP.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="MpCodingDP.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+
 
 </Project>
